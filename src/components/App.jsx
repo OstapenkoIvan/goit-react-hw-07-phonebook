@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
-import { getIsLoading, getError } from 'redux/selectors';
+import { selectIsLoading, selectError } from 'redux/selectors';
 import Container from 'components/Container/Container';
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
@@ -11,8 +11,8 @@ import s from 'components/App.module.css';
 
 function App() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   //*первичная загрузка контактов с бэка, диспатчим не экшен, а операцию-генератор.
   useEffect(() => {

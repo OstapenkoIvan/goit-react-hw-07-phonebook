@@ -1,16 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import s from 'components/Filter/Filter.module.css';
-import { getFilter } from 'redux/selectors.js';
+import { selectFilter } from 'redux/selectors.js';
 import { setFilterData } from 'redux/filterSlice';
 
 const Filter = () => {
-  const searchValue = useSelector(getFilter);
+  const searchValue = useSelector(selectFilter);
   const dispatch = useDispatch();
 
   const setFilter = evt => {
-    const filterData = evt.target.value;
-    dispatch(setFilterData(filterData));
+    dispatch(setFilterData(evt.target.value));
   };
 
   return (
