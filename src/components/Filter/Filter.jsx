@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import s from 'components/Filter/Filter.module.css';
 import { getFilter } from 'redux/selectors.js';
 import { setFilterData } from 'redux/filterSlice';
-import TextField from '@mui/material/TextField';
 
 const Filter = () => {
   const searchValue = useSelector(getFilter);
@@ -15,28 +14,16 @@ const Filter = () => {
   };
 
   return (
-    <div className={s.thumb}>
-      <TextField
-        sx={{ width: 180 }}
-        label="Find contacts by name"
-        type="search"
-        variant="standard"
+    <label className={s.label}>
+      Find contacts by name
+      <input
+        className={s.input}
+        type="text"
         value={searchValue}
         onChange={setFilter}
       />
-    </div>
+    </label>
   );
 };
 
 export default Filter;
-
-//!Standard input field with css.module//
-//<label className={s.label}>
-//Find contacts by name
-//<input
-//  className={s.input}
-//  type="text"
-//value={searchValue}
-//onChange={setFilter}
-///>
-//</label>

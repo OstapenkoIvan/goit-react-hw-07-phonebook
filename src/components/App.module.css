@@ -15,3 +15,10 @@
   padding: 20px;
   text-align: center;
 }
+
+.infoText {
+  margin-top: 10px;
+  font-weight: 500;
+  text-align: center;
+  color: cadetblue;
+}

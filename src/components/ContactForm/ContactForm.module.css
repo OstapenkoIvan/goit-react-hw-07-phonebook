@@ -8,14 +8,25 @@
 
 .submitBtn {
   display: block;
+  width: 200px;
   margin: 15px auto 0;
-  padding: 5px 15px;
+  padding: 10px;
   font-weight: 600;
+  background-color: dodgerblue;
+  color: aliceblue;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: #448fa3;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .input {
   padding: 5px 5px;
-
+  width: 100%;
   margin-top: 5px;
   font-size: 16px;
   line-height: 1.1;
